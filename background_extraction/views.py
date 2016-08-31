@@ -6,8 +6,8 @@ from .models import Greeting
 import requests
 import os
 
-import numpy as np
-import cv2
+#import numpy as np
+#import cv2
 
 # Create your views here.
 def index(request):
