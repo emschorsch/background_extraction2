@@ -7,6 +7,7 @@ import requests
 import os
 
 import numpy as np
+import cv2
 
 # Create your views here.
 def index(request):
