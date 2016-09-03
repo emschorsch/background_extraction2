@@ -6,12 +6,12 @@ from .models import Greeting
 import requests
 import os
 
-#import numpy as np
-#import cv2
+import numpy as np
+import cv2
 
 # Create your views here.
 def index(request):
-    #print(cv2.__version__)
+    print(cv2.__version__)
     p = request.POST
     username = p.get('username')
     password = p.get('password')
