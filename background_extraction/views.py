@@ -11,16 +11,18 @@ import cv2
 
 # Create your views here.
 def index(request):
-    print(cv2.__version__)
+    cv_version = cv2.__version__
     p = request.POST
     username = p.get('username')
     password = p.get('password')
 
 
     if 'username' in p:
-        return render(request, 'index.html', {'loginFailed': True})
+        return render(request, 'index.html', {'loginFailed': True, 
+            'cv_version': cv_version})
     else:
-        return render(request, 'index.html', {'loginFailed': False})
+        return render(request, 'index.html', {'loginFailed': False,
+            'cv_version': cv_version})
 
 def example_index(request):
     times = int(os.environ.get('TIMES',3))
